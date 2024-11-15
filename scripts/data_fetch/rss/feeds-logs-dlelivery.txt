@@ -1,0 +1,8 @@
+- Log RSS feed delivery:
+
+```shellscript
+ ./log_rss_delivery.sh "2023-05-15T12:00:00"
+
+
+./log_rss_delivery.sh "2023-05-15T12:00:00"
+```
