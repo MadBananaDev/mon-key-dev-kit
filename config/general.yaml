@@ -1,23 +1,22 @@
-# General configuration for DevToolkit
-
+# General configuration for this scripting library
 # Project settings
-project_name: "DevToolkit"
-version: "1.0.0"
+project_name: mon-key-kit
+version: "0.0.1"
 
 # Directory settings
-base_dir: "/path/to/devtoolkit"
+base_dir: "/"
 data_dir: "${base_dir}/data"
 log_dir: "${base_dir}/logs"
-output_dir: "${base_dir}/output"
+output_dir: "${base_dir}/build"
 
 # Backup settings
 backup_enabled: true
 backup_interval: 86400  # 24 hours in seconds
-backup_retention: 7  # Number of backups to keep
+backup_retention: 10  # Number of backups to keep
 
 # Performance settings
 max_threads: 4
-timeout: 30  # Default timeout in seconds
+timeout: 300  # Default timeout in seconds
 
 # Feature flags
 enable_cloud_integration: false
@@ -27,8 +26,8 @@ enable_advanced_analytics: false
 encryption_key: "your-secret-key-here"
 
 # API settings (if applicable)
-api_base_url: "https://api.example.com/v1"
-api_timeout: 5  # API request timeout in seconds
+api_base_url: "https://api.bananas.services"
+api_timeout: 10  # API request timeout in seconds
 
 # Database settings (if applicable)
 database:

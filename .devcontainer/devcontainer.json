@@ -1,0 +1,163 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/universal
+{
+	"name": "Default Linux Universal",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+			"ppa": true,
+			"version": "os-provided"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": true,
+			"version": "latest",
+			"pnpmVersion": "latest",
+			"nvmVersion": "latest"
+		},
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
+		"ghcr.io/eitsupi/devcontainer-features/duckdb-cli:1": {
+			"version": "latest",
+			"extensions": ""
+		},
+		"ghcr.io/eitsupi/devcontainer-features/mdbook:1": {
+			"version": "latest"
+		},
+		"ghcr.io/dhoeric/features/act:1": {},
+		"ghcr.io/customink/codespaces-features/docker-log-level:1": {
+			"level": "info"
+		},
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+		"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
+		"ghcr.io/eliises/devcontainer-features/bash-profile:1": {
+			"command": "alias k=kubectl",
+			"file": "/etc/bash.bashrc"
+		},
+		"ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {},
+		"ghcr.io/wxw-matt/devcontainer-features/script_runner:0": {},
+		"ghcr.io/joedmck/devcontainer-features/serve:1": {},
+		"ghcr.io/devcontainers-community/npm-features/typescript:1": {
+			"version": "latest"
+		},
+		"ghcr.io/nullcoder/devcontainer-features/stripe-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/itsmechlark/features/1password:1": {
+			"version": "latest"
+		},
+		"ghcr.io/itsmechlark/features/act:1": {
+			"version": "latest"
+		},
+		"ghcr.io/itsmechlark/features/redis-server:1": {
+			"version": "latest"
+		},
+		"ghcr.io/raucha/devcontainer-features/pytorch:1": {},
+		"ghcr.io/audacioustux/devcontainers/taskfile:1": {},
+		"ghcr.io/brokenpip3/devcontainers-bats/bats-libs:0": {
+			"support": "latest",
+			"assert": "latest",
+			"detik": "latest",
+			"file": "latest"
+		},
+		"ghcr.io/prulloac/devcontainer-features/ollama:1": {},
+		"ghcr.io/hspaans/devcontainer-features/sshpass:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
+		"ghcr.io/deep-space-cartel/devcontainers-features/pip:1": {
+			"location": "/var/tmp/.venv",
+			"packages": "pre-commit"
+		},
+		"ghcr.io/devcontainers-extra/features/actions-runner:1": {
+			"version": "latest",
+			"dotnetVersion": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/bash-command:1": {
+			"command": "echo hi!"
+		},
+		"ghcr.io/devcontainers-extra/features/dua:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/grpcurl-asdf:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/http-server:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/json-server:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/npm-package:1": {
+			"package": "typescript",
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/pipenv:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/pipx-package:1": {
+			"includeDeps": true,
+			"package": "black",
+			"version": "latest",
+			"injections": "pylint pytest",
+			"interpreter": "python3"
+		},
+		"ghcr.io/devcontainers-extra/features/prisma:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/qrcode:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/rollup:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/shopify-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/tmux-apt-get:1": {},
+		"ghcr.io/devcontainers-extra/features/vault-asdf:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/vercel-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/vercel-serve:1": {
+			"version": "latest"
+		},
+		"ghcr.io/davzucky/devcontainers-features-wolfi/bash:1": {},
+		"ghcr.io/davzucky/devcontainers-features-wolfi/user:1": {
+			"username": "root",
+			"userUid": "1001",
+			"userGid": "1001"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	}
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
