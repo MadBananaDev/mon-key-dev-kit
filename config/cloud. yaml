@@ -1,61 +1,13 @@
 # Cloud configuration for DevToolkit
 
-# AWS Configuration
 aws:
-  enabled: true
   region: "us-west-2"
-  access_key_id: "your-aws-access-key-id"
-  secret_access_key: "your-aws-secret-access-key"
-  s3_bucket: "devtoolkit-data"
+  bucket: "my-devtoolkit-bucket"
 
-# Google Cloud Platform Configuration
 gcp:
-  enabled: false
-  project_id: "your-gcp-project-id"
-  credentials_file: "/path/to/gcp-credentials.json"
-  storage_bucket: "devtoolkit-gcp-bucket"
+  project: "my-gcp-project"
+  bucket: "my-devtoolkit-bucket"
 
-# Azure Configuration
 azure:
-  enabled: false
-  connection_string: "DefaultEndpointsProtocol=https;AccountName=youraccount;AccountKey=yourkey;EndpointSuffix=core.windows.net"
-  container_name: "devtoolkit-container"
-
-# Cloud Function/Lambda Configuration
-serverless:
-  aws_lambda:
-    function_name: "devtoolkit-lambda"
-    handler: "lambda_handler.handler"
-    runtime: "python3.9"
-    memory_size: 128
-    timeout: 30
-
-  gcp_function:
-    function_name: "devtoolkit-function"
-    runtime: "python39"
-    entry_point: "gcp_handler"
-    memory: "256MB"
-    timeout: "60s"
-
-# Content Delivery Network (CDN) Configuration
-cdn:
-  provider: "cloudfront"
-  domain: "cdn.yourdomain.com"
-  ssl_certificate_arn: "arn:aws:acm:us-east-1:123456789012:certificate/your-certificate-id"
-
-# Monitoring and Logging
-cloud_monitoring:
-  aws_cloudwatch:
-    log_group: "/aws/lambda/devtoolkit-lambda"
-    metric_namespace: "DevToolkit/CustomMetrics"
-
-  gcp_monitoring:
-    log_name: "projects/your-project-id/logs/devtoolkit-logs"
-    metric_prefix: "custom.googleapis.com/devtoolkit/"
-
-# Backup Configuration
-cloud_backup:
-  enabled: true
-  frequency: "daily"
-  retention_period: 30  # days
-  encryption: true
+  connection_string: "DefaultEndpointsProtocol=https;AccountName=myaccount;AccountKey=mykey;EndpointSuffix=core.windows.net"
+  container: "my-devtoolkit-container"
