@@ -80,3 +80,66 @@ devtoolkit/
 9. Cloud service integration tools (e.g., AWS, GCP, Azure CLI wrappers)
 10. Automated code review and style checking tools
 **  
+
+
+git clone [https://github.com/yourusername/devtoolkit.git](https://github.com/yourusername/devtoolkit.git)
+cd devtoolkit
+
+```plaintext
+ 
+
+2. Run the setup script:
+
+```
+
+./setup_devtoolkit.sh
+
+```plaintext
+ 
+
+3. Activate the virtual environment:
+
+```
+
+source devtoolkit_env/bin/activate
+
+```plaintext
+ 
+
+## Usage
+
+Refer to individual script documentation for usage instructions. Here are some examples:
+
+- Analyze code complexity:
+```python
+from dev_toolkit import DevToolkit
+complexity = DevToolkit.analyze_code_complexity('path/to/your/file.py')
+print(complexity)
+
+```
+
+- Check if a port is in use:
+
+```shellscript
+ source dev_toolbox.shsource dev_toolbox.sh
+check_port 8080
+
+```
+
+## New Features (In Progress)
+
+1. CI/CD pipeline setup scripts
+2. Docker containerization utilities
+3. Database management tools
+4. API testing and documentation generation
+5. Log analysis and visualization
+6. Security scanning and vulnerability assessment
+7. Performance profiling and optimization
+8. Version control helpers
+9. Cloud service integration tools
+10. Automated code review and style checking
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
