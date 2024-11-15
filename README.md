@@ -26,42 +26,42 @@ DevToolkit is a comprehensive set of Python and Bash tools designed to streamlin
 
 
 devtoolkit/
-├── README.md
-├── setup.sh
-├── requirements.txt
-├── config/
-│   ├── general.yaml
-│   ├── logging.yaml
-│   └── cloud.yaml
-├── src/
-│   ├── code_analysis/
-│   │   ├── __init__.py
-│   │   ├── complexity_analyzer.py
-│   │   └── duplication_checker.py
-│   ├── system_utils/
-│   │   ├── __init__.py
-│   │   ├── file_monitor.py
-│   │   └── process_manager.py
-│   ├── data_management/
-│   │   ├── __init__.py
-│   │   ├── backup_tool.py
-│   │   └── data_generator.py
-│   ├── network_tools/
-│   │   ├── __init__.py
-│   │   ├── api_tester.py
-│   │   └── website_checker.py
-│   ├── cloud_integration/
-│   │   ├── __init__.py
-│   │   └── cloud_uploader.py
-│   └── dev_toolkit.py
-├── scripts/
-│   ├── setup_devtoolkit.sh
-│   ├── dev_toolbox.sh
-│   ├── log_rss_delivery.sh
-│   └── rss_feed_logger.py
-└── tests/
-    ├── test_code_analysis.py
-    ├── test_system_utils.py
-    ├── test_data_management.py
-    ├── test_network_tools.py
-    └── test_cloud_integration.py
+├── README.md    
+├── setup.sh    
+├── requirements.txt    
+├── config/    
+│   ├── general.yaml    
+│   ├── logging.yaml    
+│   └── cloud.yaml    
+├── src/    
+│   ├── code_analysis/    
+│   │   ├── __init__.py    
+│   │   ├── complexity_analyzer.py    
+│   │   └── duplication_checker.py    
+│   ├── system_utils/    
+│   │   ├── __init__.py    
+│   │   ├── file_monitor.py    
+│   │   └── process_manager.py    
+│   ├── data_management/    
+│   │   ├── __init__.py    
+│   │   ├── backup_tool.py    
+│   │   └── data_generator.py    
+│   ├── network_tools/    
+│   │   ├── __init__.py    
+│   │   ├── api_tester.py    
+│   │   └── website_checker.py    
+│   ├── cloud_integration/    
+│   │   ├── __init__.py    
+│   │   └── cloud_uploader.py    
+│   └── dev_toolkit.py    
+├── scripts/    
+│   ├── setup_devtoolkit.sh    
+│   ├── dev_toolbox.sh    
+│   ├── log_rss_delivery.sh    
+│   └── rss_feed_logger.py    
+└── tests/    
+    ├── test_code_analysis.py    
+    ├── test_system_utils.py    
+    ├── test_data_management.py    
+    ├── test_network_tools.py    
+    └── test_cloud_integration.py    
