@@ -1,35 +1,43 @@
-# ... (existing requirements) ...
+# DevToolkit Requirements
 
-# CI/CD
-pytest-cov==2.11.1
-tox==3.23.0
+# Core libraries
+requests==2.26.0
+matplotlib==3.4.3
+numpy==1.21.2
+Pillow==8.3.2
 
-# Docker
-docker-compose==1.29.2
+# Code analysis
+radon==5.1.0
 
-# Database management
-alembic==1.5.8
+# Project management
+pipreqs==0.4.11
 
-# API testing and documentation
+# Web framework (for webhook example)
+Flask==2.0.2
+
+# Scheduling (for webhook example)
+schedule==1.1.0
+
+# Data processing
+pandas==1.3.3
+
+# Testing
 pytest==6.2.5
-swagger-spec-validator==2.7.3
 
-# Log analysis
-ELK-stack==1.0.1
+# Documentation
+Sphinx==4.2.0
 
-# Security scanning
-bandit==1.7.0
+# Code formatting
+black==21.9b0
 
-# Performance profiling
-py-spy==0.3.5
+# Type checking
+mypy==0.910
 
-# Version control
-pre-commit==2.12.1
+# Linting
+flake8==3.9.2
 
-# Cloud services
-boto3==1.17.62
-google-cloud-storage==1.38.0
-azure-storage-blob==12.8.1
+# Dependency management
+pip-tools==6.4.0
 
-# Code review and style checking
-pylint==2.7.4
+# Virtual environment
+virtualenv==20.8.1
