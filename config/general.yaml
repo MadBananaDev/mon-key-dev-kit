@@ -1,1 +1,54 @@
+# General configuration for DevToolkit
 
+# Project settings
+project_name: "DevToolkit"
+version: "1.0.0"
+
+# Directory settings
+base_dir: "/path/to/devtoolkit"
+data_dir: "${base_dir}/data"
+log_dir: "${base_dir}/logs"
+output_dir: "${base_dir}/output"
+
+# Backup settings
+backup_enabled: true
+backup_interval: 86400  # 24 hours in seconds
+backup_retention: 7  # Number of backups to keep
+
+# Performance settings
+max_threads: 4
+timeout: 30  # Default timeout in seconds
+
+# Feature flags
+enable_cloud_integration: false
+enable_advanced_analytics: false
+
+# Security
+encryption_key: "your-secret-key-here"
+
+# API settings (if applicable)
+api_base_url: "https://api.example.com/v1"
+api_timeout: 5  # API request timeout in seconds
+
+# Database settings (if applicable)
+database:
+  host: "localhost"
+  port: 5432
+  name: "devtoolkit_db"
+  user: "devtoolkit_user"
+  password: "your-database-password"
+
+# Email settings (if applicable)
+smtp:
+  host: "smtp.example.com"
+  port: 587
+  user: "notifications@example.com"
+  password: "your-smtp-password"
+  use_tls: true
+
+# Customization
+theme: "default"
+language: "en"
+
+# Development settings
+debug_mode: false
