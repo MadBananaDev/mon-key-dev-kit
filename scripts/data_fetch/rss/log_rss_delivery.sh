@@ -21,7 +21,7 @@ timestamp=$1
 log_file="/var/log/rss_feed_delivery.log"
 
 # Append the timestamp to the log file
-echo "RSS feed delivered at: $timestamp" >> "$log_file"
+echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Feed delivered: $FEED_URL" >> "$LOG_FILE"
 
 # Print confirmation
 echo "Logged RSS feed delivery time to $log_file"
