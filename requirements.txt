@@ -41,3 +41,38 @@ pip-tools==6.4.0
 
 # Virtual environment
 virtualenv==20.8.1
+# ... (existing requirements) ...
+
+# CI/CD
+pytest-cov==2.11.1
+tox==3.23.0
+
+# Docker
+docker-compose==1.29.2
+
+# Database management
+alembic==1.5.8
+
+# API testing and documentation
+pytest==6.2.5
+swagger-spec-validator==2.7.3
+
+# Log analysis
+ELK-stack==1.0.1
+
+# Security scanning
+bandit==1.7.0
+
+# Performance profiling
+py-spy==0.3.5
+
+# Version control
+pre-commit==2.12.1
+
+# Cloud services
+boto3==1.17.62
+google-cloud-storage==1.38.0
+azure-storage-blob==12.8.1
+
+# Code review and style checking
+pylint==2.7.4
