@@ -11,8 +11,14 @@ else
     exit 1
 fi
 
-# ... (rest of the script)
-
+install_package() {
+    if ! dpkg -l | grep -q "$1"; then
+        echo "Installing $1..."
+        sudo apt-get install -y "$1" || { echo "Failed to install $1"; exit 1; }
+    else
+        echo "$1 is already installed."
+    fi
+}
 # Function to update configuration
 update_config() {
     local key=$1
