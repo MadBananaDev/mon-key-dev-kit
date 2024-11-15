@@ -2,6 +2,10 @@ import yaml
 import logging
 import logging.config
 import os
+import docker
+import boto3
+from google.cloud import storage
+from azure.storage.blob import BlobServiceClient
 
 class DevToolkit:
     def __init__(self):
@@ -20,10 +24,39 @@ class DevToolkit:
         logging.config.dictConfig(self.config['logging'])
         self.logger = logging.getLogger('devtoolkit')
 
-    # ... (rest of the methods)
+    @staticmethod
+    def create_docker_container(image_name: str, container_name: str) -> None:
+        client = docker.from_env()
+        client.containers.run(image_name, name=container_name, detach=True)
+
+    @staticmethod
+    def run_security_scan(directory: str) -> Dict[str, Any]:
+        import bandit
+        return bandit.run(directory)
+
+    @staticmethod
+    def profile_code(func, *args, **kwargs) -> Dict[str, Any]:
+        import py_spy
+        return py_spy.record(func, *args, **kwargs)
+
+    @staticmethod
+    def upload_to_cloud(file_path: str, cloud_provider: str, bucket_name: str) -> None:
+        if cloud_provider == 'aws':
+            s3 = boto3.client('s3')
+            s3.upload_file(file_path, bucket_name, os.path.basename(file_path))
+        elif cloud_provider == 'gcp':
+            client = storage.Client()
+            bucket = client.get_bucket(bucket_name)
+            blob = bucket.blob(os.path.basename(file_path))
+            blob.upload_from_filename(file_path)
+        elif cloud_provider == 'azure':
+            connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+            blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+            blob_client = blob_service_client.get_blob_client(container=bucket_name, blob=os.path.basename(file_path))
+            with open(file_path, "rb") as data:
+                blob_client.upload_blob(data)
 
     def analyze_code_complexity(self, file_path):
-        """
         Analyze the complexity of a Python file.
 
         Usage:
