@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 # DevToolkit
+=======
+# Monkey Mike's Kode Kit
+
+## DevToolkit
+
+>>>>>>> 6fffa05f3faf02fecbfc75600d37d19ff2dcf5c2
 DevToolkit is a comprehensive set of Python and Bash tools designed to streamline Linux development workflows. This toolkit provides utilities for environment setup, code analysis, performance monitoring, and various development tasks.
 ## Directory Structure
 
