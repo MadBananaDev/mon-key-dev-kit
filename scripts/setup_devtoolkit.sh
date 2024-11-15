@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Setup script for DevToolkit
+LOG_FILE="/var/log/devtoolkit_setup.log"
+exec > >(tee -a $LOG_FILE) 2>&1
+echo "Setup started at $(date)"
 
+# Setup script for DevToolkit
 # Load configuration
 config_file="config/general.yaml"
 if [ -f "$config_file" ]; then
